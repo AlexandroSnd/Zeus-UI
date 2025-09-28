@@ -1,0 +1,123 @@
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 0px;
+}
+.team__title {
+  @include title;
+}
+.team__description {
+  @include description;
+  margin-top: 24px;
+}
+.team__people {
+  display: flex;
+  margin-top: 80px;
+  gap: 32px;
+  width: 100%;
+}
+.team__person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 301px;
+}
+.team__person-image {
+}
+.team__person-title {
+  font-family: Space Grotesk;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  leading-trim: NONE;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.team__person-position {
+}
+
+@media (max-width: 1350px) {
+  .team {
+    padding: 70px 32px;
+    &__title {
+      font-family: Syne;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 40px;
+      line-height: 56px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+    &__description {
+      font-family: Space Grotesk;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0px;
+      text-align: center;
+      padding: 0 40px;
+    }
+    &__people {
+      justify-content: space-between;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__person {
+      width: 175px;
+    }
+    &__person-title {
+      font-family: Space Grotesk;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  .team {
+    padding: 48px 16px;
+    &__title {
+      font-family: Syne;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 36px;
+      line-height: 48px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+    &__description {
+      font-family: Space Grotesk;
+      font-weight: 300;
+      font-style: Light;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+    &__people {
+      gap: 16px;
+
+    }
+    &__person{
+      max-width: 136px;
+    }
+    &__person-title {
+      font-weight: 500;
+      font-style: Medium;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+  }
+}

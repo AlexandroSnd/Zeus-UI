@@ -1,0 +1,138 @@
+.collection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  padding-top: 0;
+  padding-bottom: 73px;
+}
+.collection__title {
+  font-family: Syne;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.collection__description {
+  @include description;
+  margin-top: 16px;
+}
+.collection__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+  row-gap: 64px;
+  margin-top: 64px;
+  align-items: start;
+}
+.collection__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.collection__card-image {
+}
+.collection__card-title {
+  font-family: Syne;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-top: 16px;
+  width: 88%;
+}
+.collection__card-description {
+  font-family: Space Grotesk;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-top: 12px;
+  text-align: center;
+  color: $purple;
+}
+
+@media (max-width: 1350px) {
+  .collection {
+    &__title {
+      font-family: Syne;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 40px;
+      line-height: 56px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+    &__description {
+      padding: 0;
+    }
+    &__card-image {
+      object-fit: cover;
+      border-radius: 25px;
+      height: 396px;
+    }
+    &__card-title {
+      font-family: Syne;
+      font-weight: 600;
+      font-style: SemiBold;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 834px) {
+  .collection {
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    &__title {
+      font-family: Syne;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 36px;
+      line-height: 48px;
+      letter-spacing: 0px;
+      text-align: center;
+      min-width: 288px;
+      max-width: 500px;
+    }
+    &__description {
+      max-width: 288px;
+      max-width: 500px;
+      font-family: Space Grotesk;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0px;
+      text-align: center;
+      margin-top: 8px;
+    }
+    &__cards {
+      margin-top: 32px;
+      gap: 16px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+      gap: 20px;
+      row-gap: 32px;
+      align-items: start;
+    }
+    &__card:not(.mobile) {
+      display: none;
+    }
+    &__card {
+      min-width: 288px;
+      max-width: 500px;
+    }
+  }
+}

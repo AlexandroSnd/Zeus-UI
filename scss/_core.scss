@@ -1,0 +1,26 @@
+body {
+  font-family: "Space Grotesk";
+  font-weight: 300;
+  background: rgba(252, 250, 255, 1);
+}
+
+.container {
+  @include min-max(320px, 100%);
+}
+
+.wrap {
+  @include min-max(320px, 1300px);
+  margin: 0 auto;
+  @media (max-width: 1350px) {
+    padding: 0 32px;
+  }
+}
+
+.btn {
+  font-family: Syne;
+  font-weight: 700;
+  background-color: $purple;
+  padding: 16px 20px;
+  border-radius: 15px;
+  color: $white;
+}

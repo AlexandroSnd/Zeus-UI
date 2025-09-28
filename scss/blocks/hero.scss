@@ -1,0 +1,198 @@
+.hero {
+  background-color: #fcfaff;
+  background: radial-gradient(
+    70% 70% at 50% 50%,
+    rgba(227, 108, 230, 0.26) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 117px;
+  gap: 100px;
+  position: relative;
+
+  &__details {
+    z-index: -2;
+    &--first {
+      position: absolute;
+      top: 10%;
+      left: 82%;
+    }
+    &--second {
+      position: absolute;
+      top: 40%;
+      left: -5%;
+    }
+    &--third {
+      position: absolute;
+      bottom: 15%;
+      left: 85%;
+    }
+    &--fourth {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.hero__text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  max-width: 856px;
+}
+.hero__title {
+  font-family: Syne;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 96px;
+  text-align: center;
+  text-shadow: -5px 5px 0 rgba(255, 255, 255, 1);
+}
+.hero__description {
+  text-align: center;
+  color: $purple;
+  font-size: 16px;
+  line-height: 24px;
+}
+.hero__button {
+}
+
+.hero__companies {
+  display: flex;
+  gap: 40px;
+  z-index: 1;
+}
+.hero__company {
+}
+
+@media (max-width: 1350px) {
+  .hero {
+    overflow: hidden;
+    &__title {
+      font-family: Syne;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 72px;
+      line-height: 88px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+    &__description {
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+
+    &__companies {
+      flex-wrap: wrap;
+      max-width: 453px;
+      gap: 24px;
+      padding: 32px 0;
+    }
+
+    &__company {
+      width: 135px;
+    }
+
+    &__details {
+      z-index: -2;
+      &--first {
+        position: absolute;
+        top: 10%;
+        left: 82%;
+      }
+      &--second {
+        position: absolute;
+        top: 58%;
+        left: -5%;
+      }
+      &--third {
+        position: absolute;
+        bottom: 15%;
+        left: 92%;
+      }
+      &--fourth {
+        position: absolute;
+        top: 0;
+        left: -5%;
+      }
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  .hero {
+    padding: 48px 16px;
+    gap: 48px;
+    &__text-block{
+      max-width: 288px;
+    }
+    &__title {
+      font-family: Syne;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 36px;
+      line-height: 56px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+    &__descritpion {
+      font-family: Space Grotesk;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+    &__companies{
+      max-width: 288px;
+      gap: 16px;
+    }
+    &__company{
+      width: 85px;
+    }
+    &__details {
+      z-index: -2;
+
+      //rectangle
+      &--first {
+        position: absolute;
+        top: -1%;
+        left: 80%;
+        height: 80px;
+      }
+      //spring
+      &--second {
+        position: absolute;
+        height: 150px;
+        top: 60%;
+        left: -12%;
+      }
+      //brilliant
+      &--third {
+        position: absolute;
+        bottom: 30%;
+        left: 78%;
+        height: 120px;
+      }
+      //circle
+      &--fourth {
+        position: absolute;
+        height: 130px;
+        top: 17%;
+        left: -20%;
+      }
+    }
+  }
+}
