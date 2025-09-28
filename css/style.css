@@ -253,6 +253,7 @@ body {
   display: flex;
   gap: 40px;
   z-index: 1;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 1350px) {

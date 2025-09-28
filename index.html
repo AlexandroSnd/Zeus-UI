@@ -683,5 +683,50 @@
       </div>
       <p class="navigation__rights">Copyright 2022 Zeus UI</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script>
+
+      gsap.to(".hero__details--first", {
+        y: -15,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+
+      gsap.to(".hero__details--second", {
+        y: -25,
+        duration: 3,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+
+      gsap.to(".hero__details--third", {
+        y: -20,
+        duration: 2.5,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+
+      gsap.to(".hero__details--fourth", {
+        y: -30,
+        duration: 4,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+
+      gsap.utils.toArray(".btn").forEach((btn) => {
+        btn.addEventListener("mouseenter", () => {
+          gsap.to(btn, { scale: 1.05, duration: 0.3 });
+        });
+        btn.addEventListener("mouseleave", () => {
+          gsap.to(btn, { scale: 1, duration: 0.3 });
+        });
+      });
+    </script>
   </body>
 </html>
