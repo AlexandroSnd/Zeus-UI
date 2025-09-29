@@ -93,6 +93,7 @@ body {
   font-family: "Space Grotesk";
   font-weight: 300;
   background: rgb(252, 250, 255);
+  overflow-x: hidden;
 }
 
 .container {
@@ -131,6 +132,7 @@ body {
 }
 
 .header::after {
+  box-sizing: border-box;
   content: "";
   position: absolute;
   top: 100%;
